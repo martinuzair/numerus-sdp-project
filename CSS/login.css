@@ -1,0 +1,233 @@
+#bg-wrap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Ensures the background is behind other content */
+    overflow: hidden; /* Ensures that any overflow content is hidden */
+}
+
+svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.nav{
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 6.25rem;
+    line-height:6.25rem;
+    background: linear-gradient(rgba(39,39,39,0.5),transparent);
+    z-index: 100;
+    padding: 0 1.875rem;
+}
+
+.logo{
+    width: 6.25rem;
+    height: 6.25rem;
+}
+.nav-menu{
+    padding: 0rem 18.8rem 0rem 30rem;
+}
+
+.nav-menu ul{
+    display: flex;
+}
+
+.nav-menu ul li{
+    list-style-type: none;
+}
+
+.nav-menu ul li .link{
+    text-decoration: none;
+    font-weight: 500;
+    color: black;
+    padding-bottom: 0.938rem;
+    margin: 0rem 3.75rem;
+}
+
+.link:hover{
+    border-bottom: 0.125rem solid #fff;
+}
+
+.nav-btn{
+    padding: 0rem 20rem 0rem 20rem;
+}
+
+.nav-button .btn{
+    width: 8.125rem;
+    height: 2.5rem;
+    font-weight: 500;
+    background: rgba(255,255,255,0.4);
+    border: none;
+    border-radius: 1.875rem;
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+.btn:hover{
+    background: rgba(255, 255, 255, 0.738);
+}
+
+#registerBtn{
+    margin-left: 0.938rem;
+}
+
+.btn.white-btn{
+    background: rgba(255,255,255,1.5);
+}
+
+.btn.btn.white-btn:hover{
+    background: rgba(255,255,255,0.5);
+}
+
+.form-box{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32rem;
+    height: 46.375rem;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.login-container{
+    position: absolute;
+    left: 0.25rem;
+    width: 31.25rem;
+    display: flex;
+    flex-direction: column;
+    transition: .5s ease-in-out;
+}
+
+.register-container{
+    position: absolute;
+    right: -32.5rem;
+    width: 31.25rem;
+    height: 38rem;
+    display: flex;
+    flex-direction: column;
+    transition: .5s ease-in-out;
+}
+
+.top span{
+    color: #fff;
+    font-size: small;
+    padding: 0.625rem 0rem;
+    display: flex;
+    justify-content: center;
+}
+
+.top span a{
+    font-weight: 500;
+    color: #fff;
+    margin-left: 0.313rem;
+}
+
+.buttom span{
+    color: #fff;
+    font-size: small;
+    padding: 0.625rem 0rem;
+    display: flex;
+    justify-content: center;
+}
+
+.buttom span a{
+    font-weight: 500;
+    color: #fff;
+    margin-left: 0.313rem;
+}
+
+header{
+    color: #fff;
+    font-size: 1.875rem;
+    text-align: center;
+    padding: 0.625rem 0rem 1.875rem 0rem;
+}
+
+.two-forms{
+    display: flex;
+    gap: 2.625rem;
+}
+
+
+#gender.input-field{
+    padding: 0rem 4rem 0rem 5rem;
+    
+}
+
+#date{
+    padding: 0 3rem 0 2.5rem;
+}
+
+
+
+.input-field{
+    font-size: 0.938rem;
+    background: rgba(255, 255, 255, 0.2);
+    color: black;
+    height: 3.125rem;
+    width: 100%;
+    padding: 0rem 0.625rem 0rem 2.813rem;
+    border: none;
+    border-radius: 1.875rem;
+    outline: none;
+    transition: .2s ease;
+}
+
+.input-field:hover, .input-field:focus{
+    background: rgba(255, 255, 255, 0.25);
+}
+
+::-webkit-input-placeholder{
+    color: #000000;
+}
+
+.input-box i{
+    position: relative;
+    top: -2.283rem;
+    left: 1.163rem;
+    color: black;
+}
+#name{
+    padding: 0rem 3.125rem;
+}
+.submit{
+    font-size: 0.938rem;
+    font-weight: 500;
+    color: black;
+    height: 2.813rem;
+    width: 100%;
+    border: none;
+    border-radius: 1.875rem;
+    outline: none;
+    background: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+
+.submit:hover{
+    background: rgba(81, 80, 80, 0.5);
+    box-shadow: 0.063rem 0.313rem 0.438rem 0.063rem rgba(0,0, 0, 0.2);
+}
+

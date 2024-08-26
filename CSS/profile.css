@@ -1,0 +1,196 @@
+.profile_card{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    width: 75%; 
+    height: auto;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    border-radius: 2rem;
+    border-collapse: collapse;
+    background-color: #88CDFF;
+    margin-top: 30px;
+    box-shadow: var(--shadowcombined);
+    color: var(--colour1);
+    padding-bottom: 2rem;
+}
+.profile_header {
+    text-align: center;
+    font-size: 70px;
+    font-family: "Lilita One", sans-serif;
+    height:130px;
+    background-color: white;
+    width:100%;
+    display:flex;
+
+
+}
+.profile_header h2{
+    padding:none;
+    margin: 0;
+    text-align:right;
+    padding-right: 30px;
+    width:50%;
+    float:right;
+}
+.rounded-bar {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left:40px;
+    width: 50%; /* Adjust the width as needed */
+    height: 30px; /* Adjust the height as needed */
+    background-color: #0189EC;/* Change this to the desired color */
+    border-radius: 10px; /* This makes the edges rounded */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+}
+.name{
+    padding:0;
+    margin:0 auto;
+
+}
+.name h1{
+    text-align:center;
+    font-size: 50px;
+    background-color:#F3CB00;
+    border: 3px solid black;
+    padding:0 80px;
+    width: 85%;
+    margin-top: 10px;
+    margin-left:160px;
+    margin-bottom:0;
+    border-radius: 50px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+.dob{
+    padding:0;
+    margin:0;
+    float:right;
+    width: 100%;
+}
+.dob h1{
+    text-align: right;
+    font-size: 2rem;
+    padding: 0px 65px;
+    margin-top:10px;
+    margin-bottom:0;
+    float:right;
+}
+.avatar{
+    width:100%;
+    margin:auto 0;
+    display:flex;
+    margin-left:30px;
+}
+
+
+
+
+.details{
+
+    width: 55%;
+    margin-left:30px;
+    padding:0;
+    margin-top:20px;
+
+
+}
+.details h1{
+    font-size:30px;
+    margin-top:10px;
+    text-align:left;
+    margin:0 10px;
+    background-color:#ffffdc;
+    color:#02c1f5;
+    width:50%;
+    padding-left:20px;
+    border: dashed 4px #ffe101;
+
+}
+.details h2{
+    font-size:30px;
+    margin:auto;
+    padding:10px;
+    margin-bottom:10px;
+    margin-top:10px;
+    text-align:center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    border-radius:50px;
+    width:80%;
+    background: linear-gradient(to right, #32b3ff, #99ddff);
+
+
+}
+
+.avatar-button {
+    border: none;
+    cursor: pointer;
+    margin: 10px;
+    display: inline-block;
+}
+
+.clickable-avatar:hover {
+    opacity: 0.8;
+}
+
+.non-clickable-avatar {
+    cursor: not-allowed;
+}
+#avatars-container button {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+#popup {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #99ddff;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+#avatars-container button.selected {
+    border: 2px solid #00f; /* Highlight selected avatar */
+}
+
+#openAvatarModal{
+    background-color: transparent;
+    border: none;
+    margin-top: 2rem;
+}
+
+.modal-content{
+    width: 30rem;
+    height: 22rem;
+}
+
+
+#update_avatar{
+    margin-top: 2rem;
+    margin-left: 10.5rem;
+    height: 3rem;
+    width: 9rem;
+    border-radius: 10px;
+    border: none;
+    font-size: 15pt;
+}
+
+#update_avatar:hover{
+    background-color: #D3D3D3; /* Updated from #555 to #D3D3D3 */
+}
+

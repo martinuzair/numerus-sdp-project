@@ -1,0 +1,523 @@
+*{
+  font-family: "Lilita One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.title {
+  line-height: 0;
+  padding-top: 20px;
+  padding-left: 20px;
+  width: 70%;
+  font-size: 3.125rem;
+}
+.title h2.main{
+  color:#F3CB00;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-family: "Lilita One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.title  h2+h2 {
+  line-height: 1.1;
+  padding-left: 20px;
+  color:#FA8E30;
+  font-family: "Lilita One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  
+}
+.title button{
+  margin-left: 170px;
+  padding: 10px 50px;
+  font-size: 30px;
+  font-family: "Lilita One", sans-serif;
+  border-radius: 10px;
+  color: #0072C6;
+  border: none;
+  margin-top: -20px;
+  
+}
+body {
+  font-family: "Lilita One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background: linear-gradient(#ffffff 0%,#0072C6 16%, #0072C6 100%);
+  background-repeat:no-repeat;
+  background-position: center;
+  background-size: cover;
+  overflow-x: hidden;
+  background-attachment: fixed;
+  height: 580vh;
+}
+
+.girl-image {
+  width:510px;
+  float: right;
+  box-sizing: content-box;
+  margin-top: -350px;
+  padding-right: 390px;    
+  display: flex;
+  user-select: none;
+}
+
+.castle-image {
+  width: 810px;
+  float: right;
+  margin-top: -540px;
+  margin-right:-150px;
+  padding: 0;
+  padding-top:20px ;
+  user-select: none;
+}
+
+
+.math-image {
+  z-index: 3;
+  width: 870px;
+  margin-top: -300px;
+  padding-bottom: 20px;
+
+}
+
+.color-image {
+  z-index: -1;
+  width: 1800px;
+  position: absolute;
+  margin-top: -680px;
+  left: -100px;
+  
+
+}
+.profile-image{
+  width: 100px;
+  
+}
+.scrolled-4 {
+  background: url("../image/Numerus.jpg"); /* Change to the second image URL */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  overflow-x: hidden;
+  background-attachment: fixed;
+  
+}
+.scrolled-3 {
+  background: url("../image/road1.gif"); /* Change to the second image URL */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  overflow-x: hidden;
+  background-attachment: fixed;
+  
+}
+.scrolled-2 {
+  background: url("../image/black2.gif"); /* Change to the second image URL */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  overflow-x: hidden;
+  background-attachment: fixed;
+}
+.scrolled-1 {
+  background: url("../image/storm.gif");
+  background-repeat:no-repeat;
+  background-position: center;
+  background-size: cover;
+  overflow-x: hidden;
+  background-attachment: fixed;
+}
+.intro h1{
+  color:white;
+  font-family: "Poor Story", system-ui;
+  text-align: center;
+  font-size: 50px;
+  display: absolute;
+  z-index:1;
+  margin: 30px auto;
+
+}
+.bubbles{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-top:0.5rem;
+  gap:10px;
+  
+}
+.bubbles span{
+  display: flex;
+  min-width: 200px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 140px;
+  background:#4fc3dc;
+  clip-path: polygon(50% 0%, 60% 20%, 70% 40%, 80% 60%, 85% 80%, 70% 100%, 30% 100%, 15% 80%, 20% 60%, 30% 40%, 40% 20%);
+  border-bottom-left-radius: 100%;
+  border-bottom-right-radius: 100%;
+  box-shadow: 0 e 0 10px #4fc3dc44,
+  0 0 50px #4fc3dc,
+  0 0 100px #4fc3dc;
+  margin: 0 4px;
+  animation: animate 0.01s linear infinite;
+  animation-duration: calc(25s / var(--i));
+  overflow: hidden;
+  font-size: 3rem;
+}
+.bubbles span:nth-child(even){
+  background:#1d3bfe;
+  box-shadow: 0 e 0 10px #1d3bfe44,
+  0 0 50px #1d3bfe,
+  0 0 100px #1d3bfe;
+
+}
+
+@keyframes animate{
+  0%
+  {
+    transform: translateY(-10vh) scale(0);
+  }
+  100%
+  {
+    transform: translateY(60vh) scale(1);
+  }
+}
+.run-image {
+  width: 1000px;
+  position:absolute;
+  z-index: -1;
+  margin-top: -130px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.storm-image {
+  opacity: 0.9; /* Adjust opacity to blend with background */
+  filter: blur(5px); /* Add blur effect */
+  z-index: -1;
+  width: 70%;
+  margin-left: 290px;
+  object-fit: cover;
+  mix-blend-mode: overlay; /* Blend with background */
+  transition: opacity 1s ease-in-out; /* Smooth transition */
+}
+.storm-effect h1{
+  font-family: "Poor Story", system-ui;
+  text-align: center;
+  vertical-align: top;
+  margin: -600px auto;
+  padding: 10px;
+  font-size: 35px;
+  color:black;
+  letter-spacing: 3px;
+  z-index: 1;
+  background-color: white;
+  width: 55%;
+  
+}
+.page3{
+  height: 100vh;
+}
+.page4{
+  height: 50vh;
+}
+.carousel {
+  width: 90vw;
+  height: 82vh;
+  overflow: hidden;
+  position: relative;
+  border-radius: 30px;
+  margin: 0 auto; 
+
+}
+
+.carousel .list .item {
+  inset: 0;
+  position: absolute;
+}
+
+.carousel .list .item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carousel .list .item .content {
+  position: absolute;
+  top: 20%;
+  width: 1140px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding-right: 30%;
+  box-sizing: border-box;
+  color: white;
+  letter-spacing: 4px;
+  text-shadow: 0 5px 10px #0004;
+  font-family: "Poor Story", system-ui;
+  
+}
+
+.carousel .list .item .content .des {
+  font-weight: bold;
+  font-size: 2.4em;
+}
+
+.thumbnail {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  width: max-content;
+  z-index: 100;
+  display: flex;
+  gap: 20px;
+}
+
+.thumbnail .thumb-item {
+  width: 150px;
+  height: 220px;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.thumbnail .thumb-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.arrows {
+  position: absolute;
+  top: 80%;
+  right: 52%;
+  width: 300px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.arrows button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #eee4;
+  border: none;
+  font-family: monospace;
+  color: #fff;
+  font-weight: bold;
+  font-size: large;
+  transition: .5s;
+  z-index: 100;
+}
+
+.arrows button:hover {
+  background-color: #eeee;
+  color: #555;
+}
+
+.carousel .list .item:nth-child(1) {
+  z-index: 1;
+}
+
+.carousel .list .item:nth-child(1) .des {
+  transform: translateY(0);
+  filter: blur(0);
+  opacity: 1;
+  animation: showContent 0.5s 1s linear 1 forwards;
+}
+
+@keyframes showContent {
+  to {
+      opacity: 1;
+      filter: blur(0);
+      transform: translateY(0);
+  }
+}
+
+.carousel.next .list .item:nth-child(1) img {
+  width: 150px;
+  height: 220px;
+  position: absolute;
+  left: 50%;
+  bottom: 50px;
+  border-radius: 20px;
+  animation: showImage 0.5s linear 1 forwards;
+}
+
+@keyframes showImage {
+  to {
+      width: 100%;
+      height: 100%;
+      left: 0;
+      bottom: 0;
+      border-radius: 0;
+  }
+}
+
+.carousel.next .thumbnail .thumb-item:nth-last-child(1) {
+  width: 0;
+  overflow: hidden;
+  animation: showThumbnail 0.5s linear 1 forwards;
+}
+
+@keyframes showThumbnail {
+  to {
+      width: 150px;
+  }
+}
+
+.carousel.next .thumbnail {
+  transform: translateX(150px);
+  animation: transformThumbnail 0.5s linear 1 forwards;
+}
+
+@keyframes transformThumbnail {
+  to {
+      transform: translateX(0);
+  }
+}
+
+.carousel.prev .list .item:nth-child(2) {
+  z-index: 2;
+}
+
+.carousel.prev .list .item:nth-child(2) img {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  animation: outImage 0.5s linear 1 forwards;
+}
+
+@keyframes outImage {
+  to {
+      width: 150px;
+      height: 220px;
+      border-radius: 20px;
+      left: 50%;
+      bottom: 50px;
+  }
+}
+
+.carousel.prev .thumbnail .thumb-item:nth-child(1) {
+  width: 0;
+  overflow: hidden;
+  opacity: 0;
+  animation: showThumbnail 0.5s linear 1 forwards;
+}
+
+.carousel.next .arrows button,
+.carousel.prev .arrows button {
+  pointer-events: none;
+}
+.page5{
+  height: 100vh;
+  margin-top: 150px;
+}
+.page6{
+  height:100vh;
+  position: relative;
+}
+.girl{
+  margin-top: -80px;
+  width:418px;
+  height:456px;
+  background: url(../image/walk.png);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  animation: girl 0.6s steps(7) infinite,movedgirls 2s linear infinite;
+}
+
+@keyframes girl{
+  from{
+    background-position: 0;
+  }
+  to{
+    background-position: 2926px;
+  }
+}
+
+@keyframes movedgirls {
+  0%{
+    left:0;
+  }
+  100%{
+    left:100%;
+  }
+  
+}
+
+.page6 h1{
+  font-family: "Poor Story", system-ui;
+  text-align: left;
+  font-size: 35px;
+  padding-left: 50px;
+  background-color: white;
+  width: 55%;
+}
+.page7 {
+  height: 90vh;
+  width: 100vw;
+  cursor: none;
+  position: relative;
+  margin-left: -20px;
+}
+
+.page7 h1 {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  font-family: "Lilita One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 5px;
+  color: #fafafa;
+  text-shadow: 2px 2px 2px #000;
+  pointer-events: auto;
+  white-space: nowrap;
+}
+
+.spotlight {
+  position: absolute;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  height: 95%;
+  width:95%;
+  background-image: radial-gradient(
+      circle,
+      transparent 160px,
+      rgba(0, 0, 0, 1) 200px
+  );
+  z-index: 1;
+  border-radius: 50px;
+}
+.page7 button{
+  position: absolute;
+  margin: 550px auto;
+  font-size: 30px;
+  top: 15%; /* Centering the button vertically */
+  left: 50%; /* Centering the button horizontally */
+  transform: translate(-50%, -50%); /* Centering adjustment */
+  padding: 5px;
+  width: 25%;
+  font-family: "Lilita One", sans-serif;
+  border-radius: 10px;
+  cursor: pointer;
+  z-index: 2;
+}
+.page7 button:hover{
+  background-color: #2ecc71; 
+  
+}
+.page4 .title{
+  padding: 20px;
+}

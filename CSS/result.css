@@ -1,0 +1,204 @@
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+.logo img {
+    width:80px; 
+    padding-right: 480px;
+    margin-top:0;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    padding: 10px 20px;
+}
+
+.title{
+    font-family: "Wendy One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 3rem;
+    text-align: center;
+}
+
+body {
+    background-image: linear-gradient(#ffffff 0%,#0072C6 16%, #0072C6 100%);
+    background-repeat:no-repeat;
+    background-position: center;
+    background-size: cover;
+    overflow-x: hidden;
+    background-attachment: fixed;
+}
+
+
+
+.marks-container {
+    text-align: center; /* Center the container content */
+}
+
+.marks {
+    display: inline-block; /* Make the element inline-block to wrap around the text */
+    margin-top: 4%;
+    margin-bottom: 4%;
+    padding-left: 20%;
+    padding-right: 20%;
+    font-family: "Wendy One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 12rem; /* Adjust as needed */
+    line-height: 1; /* Adjust as needed */
+    color: #ffffff;
+    border-radius: 50%; /* Make the background a circle */
+    background-color: #F04B28;
+    background-size: contain;
+}
+
+
+.message-container{
+    text-align: center; /* Center content within the container */
+}
+
+.message {
+    margin-top: 2%;
+    padding-left: 20%; /* Add some padding */
+    padding-right: 20%;
+    font-family: "Wendy One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 4rem; /* Adjust as needed */
+    line-height: 1; /* Adjust as needed */
+    color: #ffffff;
+}
+
+.proceed-container {
+    bottom: 10%;
+    float:right;
+    display: flex;
+    align-items: center;
+}
+
+.proceed-container p {
+    margin: 0;
+    padding-right: 10px; /* Adjust spacing between text and button */
+    font-family: "Wendy One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 4rem; /* Adjust as needed */
+    color: #ffffff;
+}
+
+.proceed-container button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.proceed-container button img {
+    width: 50%; /* Adjust size as needed */
+}
+
+.people-image {
+    
+    position: absolute;
+    width: 40%;
+    margin-left: 4%;
+    top: 32%;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .logo img {
+        width: 60px;
+        padding-right: 20px;
+    }
+
+    .header {
+        padding: 5px 10px;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+
+    .marks {
+        font-size: 5rem;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    .message {
+        font-size: 2.5rem;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    .proceed-container {
+        bottom: 5%;
+        right: 2%;
+    }
+
+    .proceed-container p {
+        font-size: 2rem;
+    }
+
+    .proceed-container button img {
+        width: 50%;
+    }
+
+    img[src="images/trophy.png"] {
+        width: 50%;
+        margin-left: 2%;
+        margin-top: -15%;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo img {
+        width: 40px;
+        padding-right: 10px;
+    }
+
+    .header {
+        padding: 5px 5px;
+    }
+
+    .title {
+        font-size: 1.5rem;
+    }
+
+    .marks {
+        font-size: 3rem;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .message {
+        font-size: 1.5rem;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .proceed-container {
+        bottom: 2%;
+        right: 1%;
+    }
+
+    .proceed-container p {
+        font-size: 1.5rem;
+    }
+
+    .proceed-container button img {
+        width: 80%;
+    }
+
+    img[src="images/trophy.png"] {
+        width: 40%;
+        margin-left: 1%;
+        margin-top: -10%;
+    }
+}

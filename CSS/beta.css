@@ -1,0 +1,99 @@
+
+*{
+    font-family: "Lilita One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body{
+    background-image: linear-gradient(#F2F2F2 0%, #F3CB00 100%);
+    background-repeat:no-repeat;
+    background-position: center;
+    background-size: cover;
+    overflow-x: hidden;
+    background-attachment: fixed;
+}
+
+table.info td.title, table.info2 td.title2{
+    font-size: 50px;
+    padding: 0;
+    height:80px;
+    color: #0072C6;
+    padding-left: 10px;
+}
+table.info2 td.title2{
+    text-align: right;
+}
+table.info{
+    width: 75%;
+    margin-left: 80px;
+}
+table.info2{
+    width: 75%;
+    margin-left: 280px;
+}
+table.info td.description,table.info2 td.description{
+    font-size: 20px;
+    background-color: #FA8E30;
+    padding-left: 20px;
+    height:80px;
+    padding-top: 10px;
+    vertical-align: top;
+    border-radius: 30px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+
+}
+table.progress{
+    font-size: 30px;
+    margin-left: 300px;
+    margin-top: 10px;
+    width: 58%;
+}
+ input[type="checkbox"] {
+    transform: scale(2.0); 
+}
+table.progress td.first{
+    width: 25%;
+}
+.file{
+    text-align: right;
+}
+.align-right {
+    text-align: right;
+}
+
+.progress-container {
+    width: 100%; /* Ensures it takes full width of the container */
+}
+
+.progress-bar {
+    
+    width: 100%; /* Ensures it takes full width of the container */
+    height: 30px; /* Adjust the height as needed */
+    -webkit-appearance: none; /* Removes default appearance */
+    appearance: none; /* Removes default appearance */
+    background-color: transparent; /* Set to transparent to use pseudo-elements */
+    border: none; /* Removes default border */
+    border-radius: 4px; /* Optional: adds rounded corners */
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.2); /* Adds shadow inside the progress bar */
+}
+
+.progress-bar::-webkit-progress-bar {
+    background-color: #11bb02; /* Red for unshaded area */
+    border-radius: 4px; /* Optional: adds rounded corners */
+}
+
+.progress-bar::-webkit-progress-value {
+    background-color: #FF0000; /* Green for shaded area */
+    border-radius: 4px; /* Optional: adds rounded corners */
+}
+
+.progress-bar::-moz-progress-bar {
+    background-color: #FF0000; /* Green for shaded area */
+    border-radius: 4px; /* Optional: adds rounded corners */
+}
+
+img[src="profile.png"]{
+    width: 80px;
+    padding-left: 100px;
+}
