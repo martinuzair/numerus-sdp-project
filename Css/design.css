@@ -1,0 +1,1454 @@
+/* Admin Themes */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(90deg, #ffffff, #fc6fb1);
+  background-size: 300% 300%;
+  animation: color 12s ease-in-out infinite;
+}
+
+@keyframes color {
+  0% {
+    background-position: 100% 50%;
+  }
+  50% {
+    background-position: 0 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+/* Admin Header */
+.admin-header {
+  width: 100%;
+  height: 88px;
+  position: relative;
+  z-index: 1; /* Ensure .admin-header is behind the nav */
+  box-shadow: 0px 5px 5px #3f3f3f;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible; /* Ensure dropdowns are visible outside header bounds */
+}
+
+a, .user-management {
+  text-decoration: none;
+}
+
+.user-management {
+  color: #000000;
+}
+
+/* Position and style the nav */
+nav {
+  position: absolute;
+  top: calc(50% - 44%); /* Move nav upwards by 20% */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  z-index: 3; /* Ensure nav is above .admin-header */
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+nav li {
+  position: relative;
+  padding: 15px 20px;
+  cursor: pointer;
+  border-radius: 8px; /* Border radius for list items */
+}
+
+/* Style for 'User Management' and 'Learning Level Management' */
+nav li.user-management,
+nav li.learning-level-management {
+  font-size: 1.25em; /* Increase font size */
+  font-weight: bold; /* Make text bold */
+  border-radius: 8px; /* Border radius for these items */
+}
+
+/* Ensure that the dropdown remains visible when hovering over it */
+nav li:hover:not(.profile-icon),
+nav li:hover:not(.profile-icon) .dropdown-menu {
+  background-color: #D3D3D3; /* Updated from #555 to #D3D3D3 */
+  border-radius: 8px; /* Border radius for hovered items */
+}
+
+.dropdown-menu {
+  display: none !important; /* Ensure dropdown is hidden by default */
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #D3D3D3; /* Updated from #444 to #D3D3D3 */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  z-index: 1000; /* Ensure dropdown is on top */
+  transition: display 0.3s ease; /* Optional: smooth transition */
+  border-radius: 8px; /* Border radius for dropdown menu */
+}
+
+.header-dropdown:hover .dropdown-menu,
+.dropdown-menu:hover {
+  display: block !important;
+}
+
+.dropdown-menu li {
+  padding: 10px 20px; /* Add padding for better visual appearance */
+  color: #000000; /* Default color for dropdown items */
+  border-radius: 8px; /* Border radius for dropdown items */
+  font-size: 1.25em; /* Same font size as other menu items */
+  font-weight: bold; /* Same font weight as other menu items */
+}
+
+.dropdown-menu li:hover {
+  background-color: pink !important; /* Background color on hover */
+  color: #f9d2e4 !important; /* Text color on hover */
+}
+
+.dropdown-menu .level {
+  position: relative;
+}
+
+.sub-menu {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  background-color: #D3D3D3; /* Updated from #555 to #D3D3D3 */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  z-index: 1001; /* Ensure sub-menu is on top of the level */
+  border-radius: 8px; /* Border radius for sub-menu */
+  text-align: center;
+}
+
+.dropdown-menu .level:hover .sub-menu,
+.sub-menu:hover {
+  display: block;
+}
+
+.sub-menu li {
+  padding: 10px 20px; /* Add padding for better visual appearance */
+  color: #000000; /* Default color for sub-menu items */
+  border-radius: 8px; /* Border radius for sub-menu items */
+  font-size: 1.25em; /* Same font size as other menu items */
+  font-weight: bold; /* Same font weight as other menu items */
+}
+
+.sub-menu li:hover {
+  background-color: #000000 !important; /* Background color on hover */
+  color: #f9d2e4 !important; /* Text color on hover */
+}
+
+/* Profile Dropdown Menu */
+.profile-icon {
+  position: relative;
+}
+
+.profile-dropdown-menu {
+  display: none !important; /* Ensure dropdown is hidden by default */
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #D3D3D3; /* Background color for dropdown */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-radius: 8px;
+  z-index: 1000; /* Ensure dropdown is on top */
+  text-align: center;
+}
+
+.profile-dropdown-menu li {
+  padding: 10px 20px; /* Padding for menu items */
+  font-size: 1.25em; /* Same font size as other menu items */
+  font-weight: bold; /* Same font weight as other menu items */
+  color: #000000; /* Default text color */
+}
+
+.profile-dropdown-menu li a {
+  color: #000000; /* Default text color for links */
+  text-decoration: none;
+}
+
+.profile-dropdown-menu li:hover {
+  background-color: #000000 !important; /* Background color on hover */
+  border-radius: 8px;
+}
+
+.profile-dropdown-menu li a:hover {
+  color: #f9d2e4 !important; /* Text color on hover */
+}
+
+/* Ensure profile dropdown menu displays on hover */
+.profile-icon:hover .profile-dropdown-menu {
+  display: block !important;
+}
+
+/* Hide other dropdowns when profile icon is hovered */
+.profile-icon:hover ~ nav li .dropdown-menu,
+.profile-icon:hover ~ nav li .sub-menu {
+  display: none !important;
+}
+
+/* Numerus Logo */
+.logo {
+  position: absolute;
+  top: 50%;
+  left: 10px; /* Adjust as needed */
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.logo img {
+  width: 80px;
+  height: auto;
+}
+
+/* Profile Icon */
+.profile-icon {
+  position: absolute;
+  top: 50%;
+  right: 10px; /* Adjust as needed */
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.profile-icon a {
+  display: inline-block;
+}
+
+.profile-icon img {
+  width: 70px;
+  height: auto;
+}
+
+/* Numerus Background Logo */
+.background-logo {
+  position: absolute;
+  top: 11%;
+  left: 30%;
+  width: 20px;
+  height: auto;
+  text-align: center;
+  z-index: 0; /* Set background-logo z-index to 0 */
+}
+
+.background-logo img {
+  width: 650px;
+  height: auto;
+  opacity: 0.2;
+  -webkit-user-drag: none;
+}
+
+/* Admin Home Page */
+.welcome-box {
+  position: relative; /* Ensure it is positioned above background-logo */
+  z-index: 1; /* Set welcome-box z-index to 1 */
+  width: 610px;
+  height: 250px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  opacity: 1;
+  left: 8%;
+  transform: translateY(19%);
+  display: inline-block;
+}
+
+.totalUser-box {
+  position: relative; /* Ensure it is positioned above background-logo */
+  z-index: 1; /* Set totalUser-box z-index to 1 */
+  width: 610px;
+  height: 250px;
+  background-color: #98bdff;
+  border-radius: 8px;
+  opacity: 1;
+  left: 10%;
+  transform: translateY(-50%);
+  display: inline-block;
+}
+
+.bottom-row {
+  margin-top: -6%;
+}
+
+.tutorial-box {
+  position: relative; /* Ensure it is positioned above background-logo */
+  z-index: 1; /* Set tutorial-box z-index to 1 */
+  width: 400px;
+  height: 250px;
+  background-color: #4b49ac;
+  border-radius: 8px;
+  opacity: 1;
+  left: 8%;
+  display: inline-block;
+}
+
+.chapters-box {
+  position: relative; /* Ensure it is positioned above background-logo */
+  z-index: 1; /* Set chapters-box z-index to 1 */
+  width: 400px;
+  height: 250px;
+  background-color: #7978e9;
+  border-radius: 8px;
+  opacity: 1;
+  left: 9.5%;
+  display: inline-block;
+}
+
+.quiz-box {
+  position: relative; /* Ensure it is positioned above background-logo */
+  z-index: 1; /* Set quiz-box z-index to 1 */
+  width: 400px;
+  height: 250px;
+  background-color: #f3797e;
+  border-radius: 8px;
+  opacity: 1;
+  left: 11%;
+  display: inline-block;
+}
+
+#welcome-text,
+#date-text,
+#day-text {
+  font-size: 32pt;
+  transform: translateX(15px);
+  margin-top: 2%;
+}
+
+#users-text,
+#tutorial-text,
+#chapters-text,
+#quiz-text {
+  margin-top: 2%;
+  transform: translateX(15px);
+  font-size: 20pt;
+  color: #f2f2f2;
+}
+
+
+#user-parents {
+  float: left;
+  transform: translateX(75px);
+  margin-top: 7%;
+  text-align: center;
+}
+
+#user-children {
+  float: right;
+  transform: translateX(-75px);
+  text-align: center;
+  margin-top: 7%;
+}
+
+#user-parents,
+#user-children {
+  font-size: 30pt;
+  color: #f459a1;
+}
+
+.divide-users {
+  border-left: 3px solid #ffffff;
+  height: 60%;
+  position: absolute;
+  left: 50%;
+  margin-left: -3px;
+  top: 25%;
+}
+
+.divide-text-1,
+.divide-text-2 {
+  border-top: 3px solid #ffffff;
+  width: 80%;
+  position: absolute;
+  left: 10%;
+}
+
+.divide-text-1 {
+  margin-top: 15%;
+}
+
+.divide-text-2 {
+  margin-top: 30%;
+}
+
+/* Styling for level texts */
+.level-text, 
+.level-chapters,
+.level-chp {
+  position: absolute;
+  transform: translateX(-50%);
+  font-size: 18pt;
+  color: #f2f2f2;
+  margin: 0;
+}
+
+.level-text {
+  left: 50%;
+  text-align: center;
+}
+
+.level-chapters {
+  left: 22%;
+}
+
+.level-chp {
+  left: 50%;
+}
+
+#redirect-1 {
+  width: 35px;
+  background: transparent;
+  color: #f9d2e4;
+  height: auto;
+  position: relative;
+  border-radius: 6px;
+  z-index: 2;
+  float: right;
+  right: 10%;
+  font-weight: bold;
+  font-size: 36pt;
+  top: 1%;
+  text-align: center;
+}
+
+#redirect-2 {
+  width: 35px;
+  background: transparent;
+  color: #f9d2e4;
+  height: auto;
+  position: relative;
+  border-radius: 6px;
+  z-index: 2;
+  float: right;
+  right: 1%;
+  font-weight: bold;
+  font-size: 36pt;
+  top: 26%;
+  text-align: center;
+}
+
+#redirect-3 {
+  width: 35px;
+  background: transparent;
+  color: #f9d2e4;
+  height: auto;
+  position: relative;
+  border-radius: 6px;
+  z-index: 2;
+  float: right;
+  right: -8%;
+  font-weight: bold;
+  font-size: 36pt;
+  top: 50%;
+  text-align: center;
+}
+
+
+#level-1-text,
+#level-1-chp,
+#amount-1 {
+  top: 22%; /* Adjust as needed */
+}
+
+#level-2-text,
+#level-2-chp,
+#amount-2 {
+  top: 47%; /* Adjust as needed */
+}
+
+#level-3-text,
+#level-3-chp,
+#amount-3 {
+  top: 72%; /* Adjust as needed */
+}
+
+
+/* User Management Pages */
+/* User List */
+.unscrollable-page {
+  overflow: hidden;
+  overflow-y: hidden;
+}
+
+.searchbar-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  height: 60px;
+  margin: auto;
+  margin-top: 3%;
+
+}
+
+.searchbar-input {
+  width: 60rem;
+height: 100%;
+padding: 10px;
+box-sizing: border-box;
+border: 1px solid #ccc;
+border-radius: 10px;
+font-size: 32px;
+background-color: #3f3f3f;
+color: #f9d2e4;
+margin-right: 10px; /* Space between input and button */
+}
+
+.searchbar-box button {
+  width: 7rem;
+  height: 3rem;
+  padding: 10px;
+  font-size: 25px;
+  background-color: #3f3f3f; /* Button background color */
+  color: #f9d2e4; /* Button text color */
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.searchbar-box button:hover {
+  background-color: black; /* Darker shade on hover */
+}
+
+.searchbar-input:hover {
+  background-color: #000000;
+}
+
+.scrollable-box {
+  width: 90%;
+  height: 450px;
+  overflow: scroll;
+  overflow-x: hidden;
+  padding: 10px;
+  margin-top: 40px;
+  border-radius: 8px;
+  background-color: transparent;
+  position: relative; /* Ensure it is positioned above background-logo */
+  z-index: 1; /* Set scrollable-box z-index to 1 */
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  border-radius: 8px;
+  background: transparent;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3f3f3f;
+  width: 7px;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #000000;
+}
+
+.accountprofile-box {
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color:#3f3f3f;
+  
+}
+
+.accountprofile-box:hover {
+  background-color: #000000; /* Change color when hovered */
+  cursor: pointer; /* Change cursor to pointer */
+}
+
+.profilename-text {
+  width: 20rem;
+  font-size: 24pt;
+  font-weight: bold;
+  text-align: left;
+  color: #f9d2e4;
+  margin-right: 85%;
+  margin-top: 17px;
+}
+
+.profile-item {
+  margin-bottom: 8px;
+}
+
+label {
+  font-weight: bold;
+  display: inline-block;
+  width: 100px;
+}
+
+.profilename-text, .profilerole-text, .profileemail-text, .profilenric-text, .profilephone-text, .profileparentid-text {
+  display: inline-block;
+}
+
+.profilenric-text {
+  width: 20rem;
+  font-size: 16pt;
+  font-weight: bold;
+  text-align: left;
+  color: #f9d2e4;
+  margin-right: 85%;
+  margin-top: 17px;
+}
+
+.profileparentid-text{
+  width: 20rem;
+  font-size: 16pt;
+  font-weight: bold;
+  text-align: left;
+  color: #f9d2e4;
+  margin-right: 85%;
+  margin-top: 17px;
+}
+
+
+
+.profilerole-text {
+  font-size: 18pt;
+  font-weight: bold;
+  color: #f9d2e4;
+  margin-top: -20px;
+  margin-left: 85%;
+}
+
+.profilephone-text{
+  width: 20rem;
+  font-size: 16pt;
+  font-weight: bold;
+  text-align: left;
+  color: #f9d2e4;
+  margin-right: 85%;
+  margin-top: 17px;
+}
+
+
+
+
+.profileemail-text {
+  width: 20rem;
+  font-size: 16pt;
+  color: #f9d2e4;
+  text-align: left;
+  margin-bottom: -35px;
+  margin-right: 89%;
+}
+
+/* Children Progression */
+/* Report Title */
+.report-title {
+  display: flex;
+  width: 100%;
+  height: auto;
+  justify-content: center;
+}
+
+.report-title-box {
+  margin-top: 5%;
+  width: 50%;
+  padding: 1rem;
+  background: #3f3f3f;
+  border-radius: 10px;
+  text-align: center;
+  color: #FFFFFF;
+  z-index: 1;
+}
+
+/* Report Content */
+.report-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  width: 75%;
+  height: 120vh;
+  margin: 0 auto;
+  border-collapse: collapse;
+  margin-top: 30px;
+  margin-bottom: 3rem;
+}
+
+.chapter-section {
+  width: 100%;
+  background-color: #f82889;
+  padding: 1.5rem;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  overflow: hidden;
+  margin: 1.5rem;
+  z-index: 1;
+  position: relative;
+}
+
+.chapter-section h2 {
+  margin: 0;
+  text-align: center;
+  color: #000000;
+  position: relative;
+  top: 10px; /* Move text down by 10px */
+}
+
+.chapter-content {
+  display: block;
+  margin-top: 20px;
+  transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+}
+
+.chapter-section.active .chapter-content {
+  display: block;
+  opacity: 1;
+}
+
+.tutorial-section {
+  width: 100%;
+  background-color: #f9d2e4;
+  padding: 1rem;
+  border-radius: 1rem;
+  cursor: pointer;
+  margin: 1rem 0;
+  transition: background-color 0.3s ease-in-out;
+  z-index: 1;
+  position: relative;
+}
+
+.tutorial-section h3 {
+  margin: 0;
+  position: relative;
+  top: 6px; /* Move text down by 10px */
+  font-size: 20pt;
+  color: #000000;
+}
+
+.tutorial-list {
+  display: block;
+  margin-top: 10px;
+  transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+}
+
+.tutorial-section.active .tutorial-list {
+  display: block;
+}
+
+/* Custom Checkbox */
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  padding: 10px 0;
+  cursor: pointer;
+  font-size: 22px;
+  user-select: none;
+}
+
+.checkbox-label input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkbox-custom {
+  position: relative;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border: 2px solid;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.checkbox-label input:checked ~ .checkbox-custom {
+  background-color: #2196F3;
+}
+
+.checkbox-custom:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.checkbox-label input:checked ~ .checkbox-custom:after {
+  display: block;
+}
+
+.checkbox-custom:after {
+  left: 9px;
+  top: 5px;
+  width: 6px;
+  height: 12px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+
+/* Custom styles for quiz and adventure game labels */
+.quiz-label .checkbox-custom {
+  background-color: #f9c74f;
+}
+
+.quiz-label input:checked ~ .checkbox-custom {
+  background-color: #f9c74f;
+}
+
+.adventure-label .checkbox-custom {
+  background-color: #90be6d;
+}
+
+.adventure-label input:checked ~ .checkbox-custom {
+  background-color: #90be6d;
+}
+
+/* Tutorial Management Page */
+.chapter-dropdown-wrapper {
+  display: flex;
+  align-items: center;
+  margin-top: 1%; /* Adjust as necessary */
+}
+
+.title-text {
+  float: left;
+  font-size: 36pt;
+  font-style: italic;
+  font-weight: bold;
+  margin-left: 75px;
+  margin-right: 20px;
+}
+
+.page-text {
+  font-size: 36pt;
+  font-style: italic;
+  font-weight: bold;
+  margin-left: 75px;
+  margin-right: 20px; /* Space between text and dropdown */
+}
+
+.dropbtn {
+  background-color: #3f3f3f;
+  color: #f9d2e4;
+  border: #000000;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  width: 160px;
+  height: 40px;
+  border-radius: 8px;
+}
+
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  margin-left: 20px;
+  margin-top: 50px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 4;
+  border-radius: 8px;
+}
+
+.dropdown-content a {
+  color: #f9d2e4;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  background-color: #3f3f3f;
+}
+
+.dropdown-content a:hover {background-color:#fcf8df ;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: gray;}
+
+
+.edit-button-1 {
+  width: 90px;
+  background: #465075;
+  color: #e18f9b;
+  height: 35px;
+  position: relative;
+  border-radius: 6px;
+  z-index: 2;
+  margin: auto;
+  margin-top: -36.5px;
+  float: right;
+  font-size: 18pt;
+  font-weight: bold;
+  border: none;
+}
+
+.edit-button-2 {
+  width: 90px;
+  background: #465075;
+  color: #e18f9b;
+  height: 35px;
+  position: relative;
+  border-radius: 6px;
+  z-index: 2;
+  margin: auto;
+  margin-top: -39px;
+  float: right;
+  font-size: 18pt;
+  font-weight: bold;
+  border: none;
+}
+
+.edit-button-1:hover,
+.edit-button-2:hover {
+  background: #000000;
+}
+
+.video-box {
+  position: relative; /* Ensure it is positioned above background-logo */
+  z-index: 1; /* Set welcome-box z-index to 1 */
+  width: 950px;
+  height: 600px;
+  background-color: #d9d9d9;
+  border-radius: 20px;
+  display: inline-block;
+}
+
+.video-text, .property-text {
+  font-size: 24pt;
+}
+
+.page-text, .video-text, .property-text {
+  text-align: left;
+  transform: translateX(6%);
+}
+
+.notes-box {
+  position: relative; /* Ensure it is positioned above background-logo */
+  z-index: 1; /* Set welcome-box z-index to 1 */
+  width: 1300px;
+  height: 150px;
+  background-color: #d9d9d9;
+  border-radius: 8px;
+  display: inline-block;
+}
+
+/*Edit Tutorial Page*/
+.video-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.drop-zone {
+  width: 550px; /* Slightly bigger than 360px */
+  height: 475px; /* Slightly bigger than 240px */
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-weight: 500;
+  font-size: 20px;
+  cursor: pointer;
+  color: #cccccc;
+  border: 4px dashed #009578;
+  border-radius: 10px;
+  background-color: white;
+  position: relative;
+}
+
+.drop-zone--over {
+  border-style: solid;
+}
+
+.drop-zone__input {
+  display: none;
+}
+
+.drop-zone__thumb {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #cccccc;
+  position: relative;
+}
+
+.drop-zone__thumb video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure the video fills the container */
+}
+
+.drop-zone__thumb::after {
+  content: attr(data-label);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 5px 0;
+  color: #ffffff;
+  background: rgba(0, 0, 0, 0.75);
+  font-size: 14px;
+  text-align: center;
+}
+
+.desc-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.scrollable-textarea {
+  width: 1250px; /* Slightly less than 1300px */
+  height: 140px; /* Slightly less than 150px */
+  resize: none; /* Disable resizing */
+  padding: 10px;
+  border: 2px solid #009578;
+  border-radius: 10px;
+  font-size: 16px;
+  line-height: 1.5;
+  overflow-y: auto; /* Add vertical scroll */
+  box-sizing: border-box; /* Include padding and border in width/height */
+}
+
+/* Quiz Management Homepage */
+.quizMGMT-box {
+  position: relative;
+  width: 90%;                  /* Adjust the width as needed */
+  margin: 20px auto;           /* Center the box */
+  padding: 20px;               /* Padding inside the box */
+  background-color:  #ffffff;   /* Light background color */
+  border-radius: 8px;          /* Rounded corners */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  z-index: 1; /* Set welcome-box z-index to 1 */
+}
+
+.quizMGMT-heading {
+    display: flex;               /* Use Flexbox for layout */
+    align-items: center;         /* Align items vertically */
+    justify-content: space-between; /* Space out the content */
+    padding: 15px 10px;          /* Padding inside the heading */
+    background-color: #eaeaea;   /* Background color for the heading */
+    border-bottom: 2px solid #ccc; /* Border at the bottom */
+}
+
+.quizMGMT-heading {
+  width: 96%;
+  height: 60px;
+  margin: auto;
+  margin-top: 25px;
+  position: relative; /* Ensure it is positioned above background-logo */
+  z-index: 2; /* Set searchbar-container z-index to 2 */
+  background: #3f3f3f;
+  color: #f9d2e4;
+  border-radius: 10px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.question-oddBox ,.question-evenBox{
+  width: 96%;
+  display: flex;                  
+  align-items: flex-start;        
+  padding: 10px;                 
+  margin-bottom: 15px;            
+  background-color: #f9f9f9;      
+  border: 1px solid #ddd;         
+  border-radius: 5px;             
+  min-height: 100px;              
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+.question-oddBox {
+  background: #f7d7d7;
+}
+
+.question-evenBox {
+  background: #f3797e;
+}
+
+
+
+
+.plus-button {
+  flex: 0 0 50px;              /* Fixed width for the button */
+  height: 50px;                /* Fixed height for the button */
+  background-color: #3f3f3f;   /* Blue background color */
+  color: #fff;                 /* White text color */
+  border: none;                /* No border */
+  border-radius: 50%;          /* Round button */
+  display: flex;               /* Flexbox for inner content */
+  align-items: center;         /* Center the content vertically */
+  justify-content: center;     /* Center the content horizontally */
+  cursor: pointer;             /* Pointer cursor on hover */
+  transition: background-color 0.3s; /* Smooth transition on hover */
+}
+
+.plus-button:hover {
+  color: #f4338d;
+}
+
+.question-no {
+  flex: 0 0 50px;              /* Fixed width for question number */
+  font-size: 24px;             /* Font size for the number */
+  font-weight: bold;           /* Bold text */
+  color: #333;                 /* Darker text color */
+  text-align: center;          /* Center align text */
+}
+
+.question-no, 
+.plus-text {
+  color: #f9d2e4;
+  font-size: 32pt;
+}
+
+.question-title {
+  flex: 1;                     /* Take up remaining space */
+  font-size: 32pt;             /* Font size for the title */
+  font-weight: bold;           /* Bold text */
+  color: #f9d2e4;                 /* Text color */
+  text-align: center;          /* Center align the title */
+}
+
+.question-no, .question-value {
+  float: left;
+  transform: translateX(17.5px);
+  margin-top: 5px;
+}
+
+.question-text {
+  flex: 1;                        /* Take up remaining space */
+  font-size: 18px;                /* Font size for the question text */
+  line-height: 1.4;               /* Line height for better readability */
+  word-wrap: break-word; 
+  margin-left: 30px;  
+}
+
+
+.question-value {
+  flex: 0 0 50px;                 /* Fixed width for the question number */
+  font-size: 32pt;                /* Font size for the question number */
+  font-weight: bold;              /* Bold text */
+  margin-right: 10px; 
+  color: #000;
+}
+
+.modify-button, .delete-button {
+  width: 150px;
+  background: #fcf8df;
+  height: 70%;
+  position: relative;
+  border-radius: 6px;
+  z-index: 3;
+  margin: auto;
+  margin-top: 10px;
+  float: right;
+  font-size: 20pt;
+  font-weight: bold;
+  border: none;
+}
+
+
+.delete-button {
+  margin-right: 20px;
+  margin-left: 60px;
+}
+
+.modify-button:hover, .delete-button:hover {
+  background: #000000;
+  color: #fcf8df;
+}
+
+/* Quiz Edit Page */
+.image-box {
+  position: relative; /* Ensure it is positioned above background-logo */
+  z-index: 1; /* Set welcome-box z-index to 1 */
+  width: 85%;
+  height: 250px;
+  background-color: #585858;
+  border-radius: 8px 8px 0 0;
+  opacity: 1;
+  margin-top: 3%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.update-box {
+  position: relative; /* Ensure it is positioned above background-logo */
+  z-index: 1; /* Set welcome-box z-index to 1 */
+  width: 85%;
+  height: 100px;
+  background-color: #585858;
+  border-radius:0 0 8px 8px;
+  opacity: 1;
+  padding-top: 20px;
+
+}
+
+
+.update-box input#url{
+  color: #f9d2e4;
+  font-size: 15pt;
+  margin: 0 auto;
+  width: 20%;
+  padding:0;
+  text-align: center;
+}
+
+.image-box label{
+  color: #f9d2e4;
+  margin-top: 7rem;
+  margin-left: 10rem;
+  font-size: 20pt;
+  width: 10rem;
+}
+
+.image-box input#url{
+  color: #f9d2e4;
+  font-size: 20pt;
+  width: 30rem;
+}
+
+#ques_text {
+  position: relative; /* Ensure it is positioned above background-logo */
+  z-index: 1; /* Set welcome-box z-index to 1 */
+  width: 85%;
+  height: 70px;
+  background-color: #585858;
+  border-radius: 8px;
+  opacity: 1;
+  margin-top: 1%;
+  padding: 0 5rem;
+  font-size: 1.8rem;
+  color: #f9d2e4;
+  text-align: center;
+  
+}
+
+
+#choice_1,
+#choice_2,
+#choice_3,
+#choice_4 {
+  position: relative; /* Ensure it is positioned above background-logo */
+  z-index: 1; /* Set welcome-box z-index to 1 */
+  width: 35%;
+  height: 80px;
+  background-color: #585858;
+  border-radius: 8px;
+  padding: 0 5rem;
+  font-size: 1.8rem;
+  color: #f9d2e4;
+  text-align: center;
+}
+
+#answer{
+  position: relative; /* Ensure it is positioned above background-logo */
+  z-index: 1; /* Set welcome-box z-index to 1 */
+  width: 9rem;
+  height: 35px;
+  background-color: #585858;
+  border-radius: 8px;
+  
+  font-size: 1.8rem;
+  color: #f9d2e4;
+}
+
+.correct-answer-box {
+  margin: 10px 0; 
+}
+
+.correct-answer-label {
+  width: 15rem;
+  font-weight: bold; /* Make the label text bold */
+  font-size: 20pt; /* Set the font size of the label */
+  color: #333; /* Set the color of the label text */
+  margin-bottom: 8px; /* Add space between the label and the dropdown */
+}
+
+
+.correct-answer{
+  margin-top: 15px;
+  width: 15rem;
+  font-weight: bold; /* Make the label text bold */
+  font-size: 20pt; /* Set the font size of the label */
+  color: #333; /* Set the color of the label text */
+  margin-bottom: 15px; /* Add space between the label and the dropdown */
+}
+
+#choice_1,
+#choice_3 {
+  float: left;
+  transform: translateX(21%);
+}
+
+
+
+#choice_3,
+#choice_4 {
+  margin-top: 1%;
+}
+
+#choice_2,
+#choice_4 {
+  float: right;
+  transform: translateX(-21%);
+}
+
+.next-button,
+.submit-button,
+.cancel-button {
+  width: 130px;
+  background: #3f3f44;
+  color: #f9d2e4;
+  height: 55px;
+  position: relative;
+  border-radius: 10px;
+  z-index: 1;
+  margin: auto;
+  margin-top: 8rem;
+  font-size: 16pt;
+  font-weight: bold;
+  border: none;
+}
+
+.next-button,
+.cancel-button {
+  float: left;
+  transform: translateX(45%);
+}
+
+.submit-button {
+  float: right;
+  transform: translateX(-45%);
+}
+
+.next-button:hover,
+.cancel-button:hover,
+.submit-button:hover {
+  background: #000000;
+}
+
+/* View Profile*/
+.profile-box {
+  position: relative; /* Ensure it is positioned above background-logo */
+  z-index: 1; /* Set welcome-box z-index to 1 */
+  width: 75%;
+  height: 85%;
+  background-color: #edeae5;
+  border-radius: 8px;
+  display: inline-block;
+  margin-top: 4%;
+  padding-bottom: 2rem;
+}
+
+.profile-header {
+  width: 100%;
+  height: 80px;
+  z-index: 2;
+  margin-top: 3%;
+  background-color: #3f3f3f  ;
+  color:#f9d2e4 ;
+  text-align: center;
+  font-weight: bolder;
+  position: relative;
+}
+
+.profile-header h1 {
+  z-index: 3;
+  font-size: 54pt;
+  position: relative;
+}
+
+.profile-box h2 {
+  margin-top: 1%;
+  font-weight: bolder;
+}
+
+.profile-name {
+  width: 90%;
+  height: 60px;
+  border-radius: 8px;
+  background: #f9c74f;
+  border-color: #000000;
+  border-width: 15px;
+  font-weight: bolder;
+  font-size: 34pt;
+  margin-top: 1%;
+}
+
+.birth-date {
+  width: 15%;
+  height: 30px;
+  border-radius: 8px;
+  background: #f9d2e4;
+  border-color: #000000;
+  border-width: 15px;
+  font-weight: bolder;
+  font-size: 22pt;
+  margin-top: 1%;
+}
+
+.email-box,
+.password-box {
+  width: 90%;
+  height: 60px;
+  border-radius: 8px;
+  background: #3f3f3f;
+  border-color: #000000;
+  color: #f9d2e4 ;
+  font-weight: bolder;
+  text-align: center;
+  font-size: 34pt;
+  margin-top: 1%;
+}
+
+
+.edit_button{
+  width: 130px;
+  background: #3f3f44;
+  color: #f9d2e4;
+  height: 55px;
+  position: relative;
+  border-radius: 10px;
+  z-index: 1;
+  margin: auto;
+  margin-top: 2rem;
+  font-size: 16pt;
+  font-weight: bold;
+  border: none;
+}

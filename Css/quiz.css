@@ -1,0 +1,75 @@
+*{
+    font-family: "Lilita One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body{
+    background-image: linear-gradient(#FA8E30 0%, #F04B28 100%);
+    background-repeat:no-repeat;
+    background-position: center;
+    background-size: cover;
+    overflow-x: hidden;
+    background-attachment: fixed;
+}
+
+table.ques {
+    width: 95%;
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+th, td {
+    padding: 8px;
+    text-align: left;
+}
+.audio-player {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.audio-player audio {
+    display: none; /* Hides the default audio controls */
+}
+
+td.ques1,td.ques2{
+    font-size: 45px;
+}
+td.ques1{
+    padding-bottom: 20px;
+    color: white;
+}
+td.ques2{
+    background-color: white;
+    color: black;
+}
+button{
+    background-color: transparent;
+    border: none;
+}
+table.selection {
+    width: 95%;
+    margin: 0 auto;
+    border-collapse: separate; /* Use separate borders to allow spacing */
+    border-spacing: 0 20px;
+
+}
+table.selction tr,td{
+    padding:50px;
+}
+td.yellow{
+    background-color:#F3CB00;
+    color: white;
+
+}
+
+td.blue{
+    background-color:#0072C6;
+    color: white;
+}
+
+img{
+    width:700px;
+    margin-top: -50px;
+}
+
+

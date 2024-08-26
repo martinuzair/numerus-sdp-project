@@ -1,0 +1,75 @@
+.logo {
+    display: flex;
+    align-items: center;
+}
+.logo img {
+    width:80px; 
+}
+.header {
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    padding: 10px 20px;
+}
+
+.title {
+    font-size: 50px;
+    font-weight: bold;
+    flex-grow: 1;
+    text-align: center;
+}
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Lilita One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 50px;
+    background-image: linear-gradient(#ffffff 0%,#0072C6 16%, #0072C6 100%);
+    background-repeat:no-repeat;
+    background-position: center;
+    background-size: cover;
+    overflow-x: hidden;
+    background-attachment: fixed;
+    height: 100vh;
+  }
+body h1{
+    color: #f3cb00;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+    width: 800px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 60px auto;
+    text-shadow: 2px 2px 4px #000000
+}
+body p{
+    text-align: center;
+    margin-top: -40px;
+    color: white;
+}
+.kid-image{
+    width: 400px;
+    float:right;
+    margin-top: -440px;
+}
+body button{
+    margin-left:630px ;
+    font-size: 100px;
+    border-radius: 50%;
+    padding:20px 50px;
+    border: none;
+    outline: none;
+    margin-top: -30px;
+    color: white;
+    background-color: #F15E3E;
+}

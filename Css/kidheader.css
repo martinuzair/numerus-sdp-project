@@ -1,0 +1,132 @@
+
+
+ul {
+    list-style: none;
+    background: transparent;
+
+}
+
+nav ul li {
+    display: inline-block;
+    position: relative;
+
+}
+
+ul li a {
+    display: block;
+    padding: 20px 100px;
+    color: #000; /* Change color to suit */
+    text-decoration: none;
+    text-align: center;
+    font-size: 20px;
+    border-radius: 50px;
+    background-color: transparent;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+
+}
+ul li ul.levelDropDown li a{
+    border-radius: 0;
+    box-shadow: none;
+}
+
+
+ul li ul.levelDropDown li {
+    display: block;
+    margin: 0 auto;
+}
+
+
+ul li ul.levelDropDown {
+    width: 100%;
+    background: transparent;
+    position: absolute;
+    z-index: 999;
+    display: none;
+    top:100%;
+    left:0;
+}
+
+ul li a:hover {
+    background: rgba(128,128,128,0.5);
+}
+
+ul li:hover ul.levelDropDown {
+    display: block;
+    margin-left: -40px;
+
+}
+ul li:hover > ul.levelDropDown {
+  display: block;
+}
+
+ul li ul.levelDropDown ul.levelDropDown {
+  left: 100%;
+  top: 0;
+}
+
+ul li ul.levelDropDown ul.levelDropDown li a {
+  padding: 10px 20px; /* Adjust padding to fit nested items */
+}
+
+ul li ul.levelDropDown ul.levelDropDown {
+  margin-top: -1px; /* Avoid gap between nested dropdowns */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+  }
+  .logo img {
+    width:20%; 
+    vertical-align: top;
+  }
+  .header {
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    padding: 0px;
+    justify-content: space-between;
+  }
+
+ /* Existing styles */
+
+.profile-menu {
+  position: relative;
+  display: inline-block;
+}
+
+.profile-menu img {
+  width: 70px; /* Adjust size as needed */
+  cursor: pointer;
+}
+
+.profile-dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  min-width: 200px;
+  z-index: 1000;
+}
+
+.profile-dropdown a {
+  display: block;
+  padding: 10px 20px;
+  color: #000;
+  text-decoration: none;
+  font-size: 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+.profile-dropdown a:hover {
+  background: rgba(128, 128, 128, 0.1);
+}
+
+.profile-menu:hover .profile-dropdown {
+  display: block;
+}

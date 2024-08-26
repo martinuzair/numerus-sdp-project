@@ -1,0 +1,742 @@
+#bg-wrap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Ensures the background is behind other content */
+    overflow: hidden; /* Ensures that any overflow content is hidden */
+}
+
+svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+header{
+    position: fixed;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    align-items: center;
+    padding:0rem  1.87rem;
+    background: linear-gradient(rgba(39,39,39,0.5),transparent);
+}
+
+
+
+
+
+.nav{
+    display: flex;
+    justify-content: center;
+    flex-grow: 1; 
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.logo{
+    width: 8rem;
+    height: 8rem;
+}
+
+.profile{
+    height: 3rem;
+    width: 3rem;
+
+
+}
+
+.ani , .header {
+    margin: auto;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    overflow: auto;
+    background: linear-gradient(315deg, rgba(101,0,94,1) 3%, rgba(60,132,206,1) 38%, rgba(48,238,226,1) 68%, rgba(255,25,25,1) 98%);
+    animation: gradient 15s ease infinite;
+    background-size: 400% 400%;
+    background-attachment: fixed;
+    
+}
+
+.ani{
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 70px;
+    text-align: center;
+    margin-top: 120px;
+
+    
+}
+
+
+
+.welcome span{
+    display: block;
+    font-family: "Rubik Bubbles", system-ui;
+    font-weight: 4600;
+    font-style: normal;
+}
+
+.text1{
+    font-size: 120px;
+    font-weight: 700;
+    letter-spacing: 20px;
+ 
+    margin-bottom: 20px;
+    background: rgba(245, 245, 220, 0);
+    position: relative;
+    -webkit-animation: text 3s 1, animate 5s linear infinite;
+
+}
+
+
+.text5{
+    font-size: 100px;
+    font-weight: 700;
+    letter-spacing: 20px;
+ 
+    margin-bottom: 20px;
+    background: rgba(245, 245, 220, 0);
+    position: relative;
+    -webkit-animation: text 3s 1, animate 5s linear infinite;
+
+}
+
+.text6{
+    letter-spacing: 20px;
+    margin-top: 5rem;
+    position: relative;
+    font-size: 5em;
+    color: 0 0 20px #03bcf4;
+    -webkit-box-reflect: 1px linear-gradient(transparent,black);
+    line-height: 0.70em;
+    outline: none;
+    background: rgba(245, 245, 220, 0);
+    position: relative;
+    -webkit-animation: text 3s 1, animate 5s linear infinite;
+    text-transform: uppercase;
+    
+}
+
+
+.text3{
+
+    letter-spacing: 20px;
+    margin-top: 50px;
+    margin-bottom: 70px;
+    position: relative;
+    font-size: 6em;
+    color: 0 0 20px #03bcf4;
+    -webkit-box-reflect: 1px linear-gradient(transparent,black);
+    line-height: 0.70em;
+    outline: none;
+    -webkit-animation: animate 5s linear infinite;
+    -webkit-animation: text 3s 1, animate 5s linear infinite;
+}
+
+.text4{
+    letter-spacing: 20px;
+    margin-top: 5rem;
+    position: relative;
+    font-size: 8em;
+    color: 0 0 20px #03bcf4;
+    -webkit-box-reflect: 1px linear-gradient(transparent,black);
+    line-height: 0.70em;
+    outline: none;
+    background: rgba(245, 245, 220, 0);
+    position: relative;
+    -webkit-animation: text 3s 1, animate 5s linear infinite;
+    text-transform: uppercase;
+    
+}
+
+
+
+@-webkit-keyframes animate{
+
+    0%,18%,20%,50.1%,60%,65.1%,80%,90.1%,92%{
+        color:#0e3742;
+        text-shadow:none;
+    }
+
+    18.1%,20.1%,30%,50%,60.1%,65%,80.1%,90%,92.1%,100%{
+
+        color: #fff;
+        text-shadow: 0 0 10px #03bcf4,
+        0 0 20px #03bcf4,
+        0 0 40px #03bcf4,
+        0 0 80px #03bcf4,
+        0 0 1600px #03bcf4;
+    }
+
+}
+
+.welcome:hover .text2 {
+    clip-path: inset(0 0 0 0); /* Reveal the text when the container is hovered */
+}
+
+
+
+  button {
+    outline: none;
+    height: 40px;
+    text-align: center;
+    width: 130px;
+    border-radius: 40px;
+    background: #fff;
+    border: 2px solid var(--green);
+    color: var(--green);
+    letter-spacing: 1px;
+    text-shadow: 0;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.25s ease;
+  }
+  
+  button:hover {
+    color: white;
+    background: var(--green);
+  }
+  
+  button:active {
+    letter-spacing: 5px;
+  }
+  
+  
+  @-webkit-keyframes text {
+    0% {
+        color: black;
+        margin-bottom: -40px;
+    }
+    30% {
+        letter-spacing: 25px;
+        margin-bottom: -40px;
+    }
+}
+
+
+.text2{
+    font-size: 40px;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+.wave {
+    background: rgb(255 255 255 / 25%);
+    border-radius: 1000% 1000% 0 0;
+    position: fixed;
+    width: 200%;
+    height: 12em;
+    animation: wave 10s -3s linear infinite;
+    transform: translate3d(0, 0, 0);
+    opacity: 0.8;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.wave:nth-of-type(2) {
+    bottom: -1.25em;
+    animation: wave 18s linear reverse infinite;
+    opacity: 0.8;
+}
+
+.wave:nth-of-type(3) {
+    bottom: -2.5em;
+    animation: wave 20s -1s reverse infinite;
+    opacity: 0.9;
+}
+
+@keyframes wave {
+    2% {
+        transform: translateX(1);
+    }
+
+    25% {
+        transform: translateX(-25%);
+    }
+
+    50% {
+        transform: translateX(-50%);
+    }
+
+    75% {
+        transform: translateX(-25%);
+    }
+
+    100% {
+        transform: translateX(1);
+    }
+}
+
+
+.count{
+    display: flex;
+    height: 30rem;
+    margin: 14rem 1rem;
+    justify-content: space-between;
+
+}
+
+.numberchild{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10rem;
+    background: rgba(255, 255, 255, 0.4);
+    padding: 7rem 3rem 7rem 3rem;
+    border-radius:40px;
+}
+
+.count span,h2{
+    font-family: "Playwrite DK Loopet", cursive;
+    font-optical-sizing: auto;
+    font-weight: auto ;
+    font-style: normal;
+}
+
+
+.numberchild .numberc{
+    font-size: 10rem;
+    animation: ani 1s ease-in-out infinite;
+}
+
+@keyframes ani{
+    0%{
+        transform: translateY(0px);
+    }
+    20%{
+        transform: translateY(-20px);
+    }
+    40%,100%{
+        transform: translateY(0px);
+    }
+}
+
+.numberchild .c{
+    font-size: 5rem;
+    margin-top: 2rem;
+
+}
+
+
+.childname{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.4);
+    padding: 7rem 3rem 7rem 3rem;
+    border-radius:40px;
+}
+    
+
+.childname .title{
+    font-size: 2rem;
+}
+
+.name{
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+    animation: ani 1s ease-in-out infinite;
+}
+
+.name span{
+    font-size: 2rem;
+
+    padding: 1rem 7rem;
+    border-radius: 30px;
+}
+
+
+
+.btn{
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.btn .play{
+    position: relative;
+    width: 80px;
+    height: 80px;
+    background: #f42e79;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 15px 25px #f42e7966;
+    transition: 1s;
+    z-index: 999;
+}
+
+.btn.active .play{
+    box-shadow: 0 0 0 350vh #f42e79;
+
+}
+
+
+.btn .play::before{
+    content: '';
+    position: absolute;
+    border: 25px solid white;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-right: 0px solid transparent;
+    transform: translateX(5px);
+}
+
+.btn p{
+    font-weight: 500;
+    font-size: 1em;
+    color: #888;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+
+.clip{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0);
+    height: 100%;
+    transition: 1s;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index:10000
+}
+
+
+header li{
+    list-style-type: none;
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+
+header li .link{
+    text-decoration: none;
+    font-weight: 500;
+    color: black;
+    padding-bottom: 0.938rem;
+    margin: 0rem 4rem 0rem 0rem;
+    
+}
+
+.link:hover{
+    border-bottom: 0.125rem solid #fff;
+}
+
+
+
+.clip.active{
+    transition-delay: 0.5s;
+    transform: translate(-50%,-50%) scale(1);
+
+}
+
+.clip video{
+    max-width: 900px;
+    outline: none;
+    border: 10px solid #fff;
+    box-shadow: 0 15px 35px rgbq(0,0,0,0.25);
+}
+
+.clip .close{
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    cursor: pointer;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+/* make it responsivr */
+
+@media (max-width:991px){
+    .clip video{
+        max-width: 900px;
+    }
+}
+
+.s1{
+    display: flex;
+    height: 20rem;
+    margin: 14rem;
+}
+
+.word{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-clip{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.word h2{
+    font-size: 60px;
+    margin-bottom: 30px;
+    font-family: "Playwrite DK Loopet", cursive;
+    font-optical-sizing: auto;
+    font-weight: auto ;
+    font-style: normal;
+}
+
+.word p{
+    font-size: 20px;
+    text-align: center;
+    line-height: 2em;
+    font-family: "Playwrite DK Loopet", cursive;
+    font-optical-sizing: auto;
+    font-weight: auto ;
+    font-style: normal;
+}
+
+.abutus img{
+    width: 20px;
+}
+
+.aboutus{
+
+    border-radius: 200px 0px 0px 0px;
+    background-color: antiquewhite;
+    color: white;
+    height: 150vh;
+    background-image:url(../image/pk.png);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+
+}
+
+.aboutus h2{
+    font-size: 70px;
+    font-family: "Playwrite DK Loopet", cursive;
+    font-optical-sizing: auto;
+    font-weight: auto ;
+    font-style: normal;
+}
+
+.aboutus p{
+    color:#fef7e6;
+    font-size: 20px;
+    margin-top: 60px;
+    text-align: center;
+    line-height: 2em;
+    font-family: "Playwrite DK Loopet", cursive;
+    font-optical-sizing: auto;
+    font-weight: auto ;
+    font-style: normal;
+}
+
+
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:400,700&display=swap');
+:root {
+  --dur: all 550ms ease-in-out; 
+  --dur-a: all 650ms ease-in-out;
+  --dur-b: all 750ms ease-in-out;
+}
+
+.pk {
+    padding:0;
+    margin:0;
+    height:90vh;
+    display:grid;
+    align-items:center;
+    font-family:'Ubuntu';
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#8e01e8+0,1101e8+100 */
+
+
+
+}
+.pk {
+  max-width:100%;
+  margin:auto;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  grid-gap:20px;
+  padding:0px 150px;
+  box-sizing:border-box;
+  justify-content: center;
+  align-items: center;
+  gap: 5em;
+}
+.item {
+  background:#0234FF;
+  height:400px;
+  position:relative;
+  border-radius:15px;
+  padding:30px;
+  box-sizing:border-box;
+  color:#fff;
+}
+.card {
+  position:absolute;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
+  margin:auto;
+  z-index:10;
+  width:100%;
+  height:100%;
+  overflow:hidden;
+  border-radius:15px;
+  -webkit-transition: var(--dur);
+  -moz-transition: var(--dur);
+  -ms-transition: var(--dur);
+  -o-transition: var(--dur);
+  transition: var(--dur);
+  clip-path: circle(100.0% at 50% 50%);
+}
+.card img {
+  position:absolute;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
+  margin:auto;
+  z-index:10;
+  height:100%;
+  width:100%;
+  max-width:9999px;
+  overflow:hidden;
+  border-radius:15px;
+  -webkit-transition: var(--dur);
+  -moz-transition: var(--dur);
+  -ms-transition: var(--dur);
+  -o-transition: var(--dur);
+  transition: var(--dur);
+  clip-path: circle(100.0% at 50% 50%);
+}
+.item:hover .card  img{
+  clip-path: circle(0.0% at 50% 50%);
+}
+.circle {
+  background:#1101E8;
+  max-width:100%;
+  height:100%;
+  position:absolute;
+  z-index:2;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
+  margin:auto;
+  -webkit-transition: var(--dur-a);
+  -moz-transition: var(--dur-a);
+  -ms-transition: var(--dur-a);
+  -o-transition: var(--dur-a);
+  transition: var(--dur-a);
+  clip-path: circle(100.0% at 50% 50%);
+}
+.circle2 {
+  background:#8E01E8;
+  -webkit-transition: var(--dur-b);
+  -moz-transition: var(--dur-b);
+  -ms-transition: var(--dur-b);
+  -o-transition: var(--dur-b);
+  transition: var(--dur-b);
+  clip-path: circle(100.0% at 50% 50%);
+}
+.item:hover .card  img {
+  clip-path: circle(0.0% at 50% 50%);
+}
+.item:hover .card  .circle {
+  clip-path: circle(0.0% at 75% 60%);
+}
+.item:hover .card  .circle2 {
+  clip-path: circle(0.0% at 35% 20%);
+}
+.item img {
+  max-width:100%;
+  position:absolute;
+  z-index:3;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
+  margin:auto;
+}
+.content {
+  position:relative;
+  z-index:0;
+  display:flex;
+  align-items:center;
+  height:100%;
+  
+}
+
+
+.content p{
+    font-size: 1rem;
+    font-family: "Playwrite DK Loopet", cursive;
+    font-optical-sizing: auto;
+    font-weight: auto ;
+    font-style: normal;
+    line-height: 2em;
+    text-align: center;
+}
+
+
+footer{
+    display: flex;
+    background-color: #888;
+    height: 80px;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+    background-color: #231f20;
+}
+
+footer p{
+    color: #fff;
+}
+
